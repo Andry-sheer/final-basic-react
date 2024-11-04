@@ -1,0 +1,11 @@
+.react-tabs {
+  border: none;
+  outline: none;
+  &__tab {
+      &--selected {
+        .tabs__links-item {
+          @include main-gradient-text;
+        }
+      }
+  }
+}
