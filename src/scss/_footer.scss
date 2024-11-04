@@ -1,40 +1,9 @@
 
 .footer {
   background: $bg-color;
-  padding:  30px;
-
-    @include viewport-md {
-      padding: 30px 60px; 
-    }
-
-    @include viewport-xxl {
-      padding: 30px 160px;
-    }
 
     &__container {
-      margin-top: 30px;
-
-      @include viewport-md {
-        position: relative;
-      }
-
-      &--services, &--team, &--profile {
-        margin: 0;
-      }
-
-      &--about, &--publication {
-        margin: 0;
-        position: relative;
-
-        &::before {
-          content: '';
-          position: absolute;
-          top: -30px;
-          left: 0;
-          width: 100%;
-          border-top: 2px solid $separator-color;
-        }
-      }
+      padding: 30px;
 		}
 
 		&__list {
@@ -42,21 +11,19 @@
       flex-flow: column;
       align-items: center;
       gap: 15px;
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: -30px;
+        left: 0;
+        width: 100%;
+        border-top: 2px solid $separator-color;
+      }
 
       @include viewport-md {
         align-items: start;
-      }
-
-      &--services {
-        @include viewport-md {
-          gap: 21px;
-          align-items: start;
-          margin-bottom: 30px;
-        }
-
-        @include viewport-lg {
-          margin: 0;
-        }
       }
 		}
 
@@ -176,8 +143,8 @@
 
         @include viewport-lg {
           position: absolute;
-          top: 0;
-          right: 0;
+          top: 30px;
+          right: 300px;
         }
       }
 		}

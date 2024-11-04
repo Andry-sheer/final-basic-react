@@ -3,7 +3,7 @@ import '../scss/style.scss';
 const Footer = () => {
   return (
     <footer className="footer">
-		<div className="footer__container">
+		<div className="container footer__container">
 			<ul className="footer__list">
 				<div className="footer__inner-adress">
 					<li className="footer__adress">Kyiv, Mechnikova str., 14/1</li>

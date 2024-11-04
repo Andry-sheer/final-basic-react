@@ -2,10 +2,11 @@ import "../scss/style.scss";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 
 
-const Tabss = () => {
+const myTabs = () => {
   return (
+    <div className="tabs" id="tabs">
     <Tabs>
-      <div className="container tabs__container" id="tabs">
+      <div className="container tabs__container">
         <TabList>
           <ul className="tabs__links">
             <Tab>
@@ -80,7 +81,8 @@ const Tabss = () => {
         </ul>
       </div>
     </Tabs>
+  </div>
   );
 };
 
-export default Tabss;
+export default myTabs;
