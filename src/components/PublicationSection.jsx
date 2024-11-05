@@ -18,7 +18,9 @@ const PublicationSection = () => {
             <img src={public_1} alt="publication"/>
           </div>
           <div className="publications__card-inner">
-            <a className="publications__card-title" href="./pages/publications/publications-one.html">Equity associate</a>
+            <a className="publications__card-title" href="./pages/publications/publications-one.html">
+            Equity associate
+            </a>
             <p className="publications__card-date">April 22</p>
             <p className="publications__card-description">I'm a jun on projects. 
               I am a co-owner of a law firm. How it happened. 
@@ -48,7 +50,9 @@ const PublicationSection = () => {
             <img src={public_3} alt="publication"/>
           </div>
           <div className="publications__card-inner">
-            <a className="publications__card-title" href="./pages/publications/publications-three.html">Millennial Testament</a>
+            <a className="publications__card-title" href="./pages/publications/publications-three.html">
+            Millennial Testament
+            </a>
             <p className="publications__card-date">August 19</p>
             <p className="publications__card-description">What and how modern vloggers, 
               opinion leaders and crypto-millionaires will inherit A typical 

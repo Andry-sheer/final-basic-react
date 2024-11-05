@@ -1,3 +1,14 @@
+.react-tabs {
+  border: none;
+  outline: none;
+  &__tab {
+      &--selected {
+        border: none;
+        outline: none;
+      }
+  }
+}
+
 
 .tabs {
   color: $basic-white;
@@ -57,8 +68,10 @@
       color: $accent-color; 
     }
 
-    &.active {
-      @include main-gradient-text;
+    &.react-tabs__tab {
+      &--selected {
+        @include main-gradient-text;
+      }
     }
   }
 
@@ -80,9 +93,6 @@
     @include viewport-xxl {
       flex: 1 1 60%;
     }
-  }
-
-  &__content-item {
   }
 
   &__content-title {

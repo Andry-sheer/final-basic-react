@@ -15,44 +15,44 @@ import ultimatecard from '../assets/images/ultimatecard.png';
 
 const Partners = () => {
   return (
-    <section class="partners">
-    <div class="partners__container">
-      <h3 class="partners__title">They already trust us</h3>
-      <div class="partners__container-inner">
-        <div class="partners__images">
+    <section className="partners">
+    <div className="partners__container">
+      <h3 className="partners__title">They already trust us</h3>
+      <div className="partners__container-inner">
+        <div className="partners__images">
           <img src={hillel} alt="partner hillel"/>
         </div>
-        <div class="partners__images">
+        <div className="partners__images">
           <img src={wannabiz} alt="partner wannabiz"/>
         </div>
-        <div class="partners__images">
+        <div className="partners__images">
           <img src={tapgerine} alt="partner tapgerine"/>
         </div>
-        <div class="partners__images">
+        <div className="partners__images">
           <img src={dlook} alt="partner 3dlook"/>
         </div>
-        <div class="partners__images">
+        <div className="partners__images">
           <img src={orangear} alt="partner orangear"/>
         </div>
-        <div class="partners__images">
+        <div className="partners__images">
           <img src={adtelligent} alt="partner adtelligent"/>
         </div>
-        <div class="partners__images">
+        <div className="partners__images">
           <img src={clickky} alt="partner clickky"/>
         </div>
-        <div class="partners__images">
+        <div className="partners__images">
           <img src={ecoLeasing} alt="partner eco-leasing"/>
         </div>
-        <div class="partners__images">
+        <div className="partners__images">
           <img src={ingratek} alt="partner ingratek"/>
         </div>
-        <div class="partners__images">
+        <div className="partners__images">
           <img src={cityPar} alt="partner city-park"/>
         </div>
-        <div class="partners__images">
+        <div className="partners__images">
           <img src={artprint} alt="partner artprint"/>
         </div>
-        <div class="partners__images">
+        <div className="partners__images">
           <img src={ultimatecard} alt="partner ultimatecard"/>
         </div>
       </div>

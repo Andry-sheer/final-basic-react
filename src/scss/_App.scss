@@ -57,24 +57,6 @@ body {
   }
 }
 
-.react-tabs {
-  border: none;
-  outline: none;
-  &__tab {
-      &--selected {
-        border: none;
-        outline: none;
-        .tabs__links-item {
-          @include main-gradient-text;
-
-          &:hover {
-            @include main-gradient-text;
-          }
-        }
-      }
-  }
-}
-
 .dotted {
   display: none;
 

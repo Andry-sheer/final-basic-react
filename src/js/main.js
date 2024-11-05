@@ -13,8 +13,6 @@
   })
 })();
 
-
-
 (()=> {
   const publicationButton = document.querySelectorAll('.publications__slide-article');
   publicationButton.forEach((item, index)=> {

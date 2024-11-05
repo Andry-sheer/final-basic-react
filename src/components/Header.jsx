@@ -1,25 +1,32 @@
+import { useState } from 'react';
 import '../scss/style.scss';
 
 const Header = () => {
+  const [activeLink, setActiveLink] = useState('EN');
+
+  const handleLinkClick = (lang) => {
+    setActiveLink(lang);
+  }
+
   return (
     <header className="header">
     <div className="container header__container">
       <div className="header__inner">
         <ul className="header__langs">
-          <li className="header__langs-item">
-            <a className="header__langs-link" href="#">UA</a>
-          </li>
-          
-          <li className="header__langs-item">
-            <a className="header__langs-link" href="#">KR</a>
-          </li>
-
-          <li className="header__langs-item">
-            <a className="header__langs-link active" href="#">EN</a>
-          </li>
+          {['UA', 'KR', 'EN'].map((lang) => (
+              <li key={lang} className="header__langs-item">
+                <a href="/#"
+                    className={`header__langs-link ${activeLink === lang ? 'active' : ''}`}
+                    onClick={(event) => {
+                    event.preventDefault();
+                    handleLinkClick(lang);
+                    }}>{lang}
+                </a>
+              </li>
+            ))}
         </ul>
         <span className="dotted"></span>
-        <p className="header__address">Kyiv, Mechnikova str., 14/1</p>
+        <p className="header__address">Kyiv, Mechanics str., 14/1</p>
         <span className="dotted"></span>
         <a className="header__phone" href="tel:0800211927">0800 211 927</a>
         <span className="dotted"></span>
@@ -31,7 +38,7 @@ const Header = () => {
       </div>
 
       <div className="header__box">
-        <a className="header__box-logo" href="#" aria-label="Main logo-white">
+        <a className="header__box-logo" href="/#" aria-label="Main logo-white">
           <svg>
             <use href='#Logo'></use>
           </svg>

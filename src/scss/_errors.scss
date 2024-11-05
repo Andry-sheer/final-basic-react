@@ -1,0 +1,27 @@
+.error {
+  background: $gradient-superSoft;
+
+  &__wrapper {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    background: url('../assets/images/header-bg.png') no-repeat center / auto 100%;
+  }
+
+  &__title {
+    @include subtitle($basic-white);
+    font-size: 20px;
+    text-transform: uppercase;
+
+    @include viewport-xl {
+      font-size: 50px;
+    }
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
