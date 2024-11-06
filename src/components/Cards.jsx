@@ -1,10 +1,18 @@
 import '../scss/style.scss';
+import { useNavigate } from "react-router-dom";
+
 
 const Cards = () => {
+  const navigateServices = useNavigate();
+
+  const handleClickService = () => {
+    navigateServices('/services')
+  }
+
   return (
     <div className="cards">
     <div className="container cards__container">
-        <a href="./pages/services.html" className="cards__link">Service</a>
+        <p onClick={handleClickService} className="cards__link">Service</p>
         <h2 className="cards__title">What can we do better than others?</h2>
     <div className="cards__container-inner">
       <div className="cards__content-card">

@@ -14,7 +14,7 @@ const PublicationSection = () => {
       <div className="publications__body">
 
         <article className="publications__card">
-          <div className="piblications__card-image">
+          <div className="publications__card-image">
             <img src={public_1} alt="publication"/>
           </div>
           <div className="publications__card-inner">
@@ -30,7 +30,7 @@ const PublicationSection = () => {
         </article>
 
         <article className="publications__card">
-          <div className="piblications__card-image">
+          <div className="publications__card-image">
             <img src={public_2} alt="publication"/>
           </div>
           <div className="publications__card-inner">
@@ -46,7 +46,7 @@ const PublicationSection = () => {
         </article>
 
         <article className="publications__card">
-          <div className="piblications__card-image">
+          <div className="publications__card-image">
             <img src={public_3} alt="publication"/>
           </div>
           <div className="publications__card-inner">

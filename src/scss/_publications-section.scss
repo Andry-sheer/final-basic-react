@@ -42,70 +42,18 @@
   &__body {
     display: flex;
     flex-flow: column;
-    padding: 0 0 30px 0;
+    gap: 30px;
 
     @include viewport-md {
       flex-flow: row;
       flex-wrap: wrap;
-      gap: 30px;
-    }
-
-    &--publication {
-      &::after {
-        display: none;
-      }
-    }
-  }
-
-  &__slide {
-    border-radius: 12px;
-    padding: 2px;
-    height: 42px;
-    background: $separator-color;
-    display: flex;
-    gap: 2px;
-  }
-
-  &__slide-article {
-    font-weight: 700;
-    font-size: 16px;
-    text-align: center;
-    color: $main-color;
-    border-radius: 10px;
-    padding: 8px 30px 10px 30px;
-    transition: all 1s;
-    cursor: pointer;
-
-    &:hover {
-      background: $bg-color;
-      transition: all .4s;
-    }
-
-    &.active {
-      background: $basic-white;
-    }
-  }
-
-  &__button-container {
-    padding: 0 0 30px 0;
-    display: flex;
-    justify-content: center;
-
-    &--bottom {
-      padding: 0;
-      margin: 30px 0;
     }
   }
 
   &__card {
-    margin: 0 0 30px 0;
     border-radius: $radius-md;
     overflow: hidden;
     background: $basic-white;
-
-    &:nth-child(3), &:nth-child(6) {
-      margin: 0;
-    }
 
     @include viewport-md {
       flex: 1 1 45%;
@@ -115,17 +63,15 @@
     @include viewport-lg {
       flex: 1 1 30%;
     }
+  }
 
-    &--publication {
-      &:nth-child(3) {
-        margin: 0 0 30px 0;
-      }
+  &__card-image {
+    height: 200px;
 
-      @include viewport-md {
-        &:nth-child(3) {
-          margin: 0;    
-        }
-      }
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
     }
   }
 
@@ -170,16 +116,3 @@
     }
   }
 }
-.piblications {
-
-  &__card-image {
-    height: 200px;
-
-    img {
-      object-fit: cover;
-      width: 100%;
-      height: 100%;
-    }
-  }
-}
-

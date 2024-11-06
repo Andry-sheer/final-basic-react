@@ -3,7 +3,7 @@
 
   &__wrapper {
     display: grid;
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: auto 1fr;
     min-height: 100vh;
     background: url('../assets/images/header-bg.png') no-repeat center / auto 100%;
   }
@@ -19,6 +19,7 @@
   }
 
   &__container {
+    grid-row: 2/3;
     display: flex;
     align-items: center;
     justify-content: center;

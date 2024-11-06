@@ -8,6 +8,7 @@ import TeamSection from "../components/TeamSection";
 import Partners from "../components/Partners";
 import PublicationSection from "../components/PublicationSection";
 
+
 const Home = () => {
   return (
     <>

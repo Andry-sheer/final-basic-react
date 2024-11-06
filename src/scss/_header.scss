@@ -61,8 +61,10 @@
 
 
 .header {
+  padding: 0 0 30px 0;
+
   @include viewport-md {
-    padding: 50px 0 0;
+    padding: 50px 0;
   }
 
   &__container {
@@ -95,17 +97,12 @@
     @include viewport-lg {
       margin: 0 0 15px;
       justify-content: flex-end;
-
       grid-area: 1/2/2/3;
     }
   }
 
   &__langs {
     display: flex;
-  }
-
-  &__langs-item {
-    
   }
 
   &__langs-link {
@@ -209,103 +206,16 @@
   &__box-logo {
     line-height: 10px;
 
-    svg {
-      line-height: 10px;
-      width: 70px;
-      height: 32px;
-
-      @include viewport-md {
-        width: 130px;
-        height: 60px;
-      }
-    }
-
-    &--services, &--eComance, &--about, &--team, &--profile, &--contact {
-      line-height: 10px;
-
-        img {
-          width: 169px;
-          height: 32px;
-        }
+      svg {
+        line-height: 10px;
+        width: 70px;
+        height: 32px;
 
         @include viewport-md {
-          img {
-            width: 302px;
-            height: 60px;
-          }
+          width: 130px;
+          height: 60px;
         }
       }
-
-      &--contact {
-        img {
-          width: 166px;
-          height: 32px;
-        }
-
-        @include viewport-md {
-          img {
-            width: 297px;
-            height: 60px;
-          }
-        }
-      }
-
-      &--team {
-        img {
-          width: 142px;
-          height: 32px;
-        }
-
-        @include viewport-md {
-          img {
-            width: 254px;
-            height: 60px;
-          }
-        }
-      }
-
-      &--profile {
-        img {
-          width: 142px;
-          height: 32px;
-        }
-
-        @include viewport-md {
-          img {
-            width: 254px;
-            height: 60px;
-          }
-        }
-      }
-
-      &--about {
-        img {
-          width: 177px;
-          height: 32px;
-        }
-
-        @include viewport-md {
-          img {
-            width: 318px;
-            height: 60px;
-          }
-        }
-      }
-
-      &--publication {
-        img {
-          width: 212px;
-          height: 32px;
-        }
-
-        @include viewport-md {
-          img {
-            width: 382px;
-            height: 60px;
-          }
-        }
-      }
-
     }
 
   &__box-inside {
@@ -355,39 +265,6 @@
     span {
       top: 50%;
       transform: translateY(-50%);
-    }
-
-    &--about, &--publication, &--team, &--profile {
-      width: 25px;
-      height: 18px;
-      position: relative;
-      cursor: pointer;
-  
-      @include viewport-md {
-        display: none;
-      }
-
-      &::before,
-      &::after,
-      span {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 2px;
-        right: 0;
-        background: $main-color;
-      }
-
-      &::after {
-        top: auto;
-        bottom: 0;
-      }
-  
-      span {
-        top: 50%;
-        transform: translateY(-50%);
-      }
     }
   }
 

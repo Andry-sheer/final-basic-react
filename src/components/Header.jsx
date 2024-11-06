@@ -1,11 +1,31 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../scss/style.scss';
 
 const Header = () => {
   const [activeLink, setActiveLink] = useState('EN');
+  const [activeBurger, setActiveBurger] = useState(false);
+  const navigate = useNavigate();
+
+  const routes = {
+    home: '/',
+    services: '/services',
+    about: '/about',
+    team: '/team',
+    publications: '/publications',
+    contacts: '/contacts'
+  }
+
+  const handleClick = (path) => {
+    navigate(path);
+  }
 
   const handleLinkClick = (lang) => {
     setActiveLink(lang);
+  }
+
+  const handleButtonBurger = () => {
+    setActiveBurger(true);
   }
 
   return (
@@ -38,35 +58,35 @@ const Header = () => {
       </div>
 
       <div className="header__box">
-        <a className="header__box-logo" href="/#" aria-label="Main logo-white">
+        <div className="header__box-logo" onClick={()=> handleClick(routes.home)}>
           <svg>
             <use href='#Logo'></use>
           </svg>
-        </a>
-
-          <div className="header__box-burger">
-            <span></span>
         </div>
-
+          <div onClick={handleButtonBurger} className="header__box-burger">
+            <span></span>
+          </div>
       </div>
+      
 
-      <nav className="header__nav">
-        <div className="header__nav-close"></div>
+
+      <nav className={`header__nav ${activeBurger === true ? 'active' :  ''}`}>
+        <div onClick={()=> {setActiveBurger(false)}} className="header__nav-close"></div>
         <ul className="header__nav-list">
           <li className="header__nav-item">
-            <a className="header__nav-link" href="./pages/about.html">about us</a>
+            <p className="header__nav-link" onClick={()=> handleClick(routes.about)}>about us</p>
           </li>
           <li className="header__nav-item">
-            <a className="header__nav-link" href="./pages/services.html">services</a>
+            <p className="header__nav-link" onClick={()=> handleClick(routes.services)}>services</p>
           </li>
           <li className="header__nav-item">
-            <a className="header__nav-link" href="./pages/team.html">team</a>
+            <p className="header__nav-link" onClick={()=> handleClick(routes.team)}>team</p>
           </li>
           <li className="header__nav-item">
-            <a className="header__nav-link" href="./pages/publications.html">publications</a>
+            <p className="header__nav-link" onClick={()=> handleClick(routes.publications)}>publications</p>
           </li>
           <li className="header__nav-item">
-            <a className="header__nav-link" href="./pages/contact.html">contact</a>
+            <p className="header__nav-link" onClick={()=> handleClick(routes.contacts)}>contact</p>
           </li>
         </ul>
       </nav>

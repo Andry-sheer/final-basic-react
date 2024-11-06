@@ -7,7 +7,7 @@ const Error = () => {
   return (
       <div className="error">
         <div className="error__wrapper">
-          <Header/>
+          <Header />
           <div className="container error__container">
             <h1 className="error__title">page not found | 404</h1>
           </div>
