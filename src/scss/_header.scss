@@ -361,6 +361,7 @@
     background: $bg-color;
     display: block;
     border-radius: $radius-md;
+    cursor: pointer;
 
     @include viewport-md {
       @include base-link($basic-white, $regular-color);
